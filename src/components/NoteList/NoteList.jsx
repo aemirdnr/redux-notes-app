@@ -1,7 +1,7 @@
 import "./NoteList.sass";
 import { BiCopy, BiTrashAlt } from "react-icons/bi";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function NoteList() {
   const notes = useSelector((state) => state.notes.items);

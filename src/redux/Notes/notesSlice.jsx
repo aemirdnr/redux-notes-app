@@ -9,11 +9,32 @@ export const notesSlice = createSlice({
         note: "This is a test note, lorem ipsum dolor sit amet.",
         color: "bg-warning",
       },
+      {
+        id: nanoid(),
+        note: "This is a test note, lorem ipsum dolor sit amet.",
+        color: "bg-info",
+      },
+      {
+        id: nanoid(),
+        note: "This is a test note, lorem ipsum dolor sit amet.",
+        color: "bg-primary",
+      },
     ],
   },
   reducers: {
-    addNote: (state, action) => {
-      state.notes.push(action.payload);
+    addNote: {
+      reducer: (state, action) => {
+        state.items.push(action.payload);
+      },
+      prepare: ({ note, color }) => {
+        return {
+          payload: {
+            id: nanoid(),
+            note,
+            color,
+          },
+        };
+      },
     },
   },
 });
