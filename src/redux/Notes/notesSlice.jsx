@@ -6,20 +6,21 @@ export const notesSlice = createSlice({
     items: [
       {
         id: nanoid(),
-        note: "This is a test note, lorem ipsum dolor sit amet.",
+        note: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat sollicitudin elit, blandit sagittis ipsum tristique vitae.",
         color: "bg-warning",
       },
       {
         id: nanoid(),
-        note: "This is a test note, lorem ipsum dolor sit amet.",
+        note: "Praesent vitae ligula pretium, dignissim felis nec, posuere turpis.",
         color: "bg-info",
       },
       {
         id: nanoid(),
-        note: "This is a test note, lorem ipsum dolor sit amet.",
+        note: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
         color: "bg-primary",
       },
     ],
+    filter: "",
   },
   reducers: {
     addNote: {
@@ -42,8 +43,11 @@ export const notesSlice = createSlice({
 
       state.items = filtered;
     },
+    updateFilter: (state, action) => {
+      state.filter = action.payload.toLowerCase();
+    },
   },
 });
 
-export const { addNote, deleteNote } = notesSlice.actions;
+export const { addNote, deleteNote, updateFilter } = notesSlice.actions;
 export default notesSlice.reducer;

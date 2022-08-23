@@ -47,8 +47,8 @@ function AddNote() {
               className="bg-primary rounded-pill"
               onClick={() => setColor("bg-primary")}
               style={{
-                "min-width": "36px",
-                "min-height": "36px",
+                minWidth: "36px",
+                minHeight: "36px",
                 cursor: "pointer",
               }}
             ></div>
@@ -56,8 +56,8 @@ function AddNote() {
               className="bg-secondary rounded-pill"
               onClick={() => setColor("bg-secondary")}
               style={{
-                "min-width": "36px",
-                "min-height": "36px",
+                minWidth: "36px",
+                minHeight: "36px",
                 cursor: "pointer",
               }}
             ></div>
@@ -65,8 +65,8 @@ function AddNote() {
               className="bg-warning rounded-pill"
               onClick={() => setColor("bg-warning")}
               style={{
-                "min-width": "36px",
-                "min-height": "36px",
+                minWidth: "36px",
+                minHeight: "36px",
                 cursor: "pointer",
               }}
             ></div>
@@ -74,8 +74,8 @@ function AddNote() {
               className="bg-dark rounded-pill"
               onClick={() => setColor("bg-dark")}
               style={{
-                "min-width": "36px",
-                "min-height": "36px",
+                minWidth: "36px",
+                minHeight: "36px",
                 cursor: "pointer",
               }}
             ></div>
